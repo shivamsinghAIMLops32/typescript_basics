@@ -23,7 +23,7 @@ function sum(a:number,b:number):number{
 }
 const sumAns = sum(2,6);
 console.log(sumAns);
-
+console.log(sumAns);
 // can drive or not
 function isLegal(age: number): boolean {
     return age >= 18 ? true : false;
