@@ -185,7 +185,7 @@ console.log(
 );
 
 
-// enum
+// enum : - defines set of named constants
 enum Direction {
     Up,
     Down,
@@ -204,10 +204,66 @@ let move: Direction = Direction.Up;
 
 console.log(move); // Output: 0 (the index of the 'Up' constant)
 
+
+// enum
+
 enum Genders {
     male,
     female,
     others
 }
 
-let shivam : Genders = Genders.male;
+interface Buyer {
+    name: string;
+    age: number;
+    gender: Genders;
+}
+
+function isOthers(obj: Buyer[]): string[] {
+    // Filter buyers with gender as "others"
+    const filteredBuyers: Buyer[] = obj.filter(value => value.gender === Genders.others);
+    
+    // Map the filtered buyers to the desired string format
+    const ansArray: string[] = filteredBuyers.map(val => 
+        `${val.name} of age ${val.age} is ${Genders[val.gender]} so not allowed or eligible to buy`
+    );
+    
+    return ansArray; // Return the mapped array
+}
+
+const buyers: Buyer[] = [
+    { name: "Alice", age: 30, gender: Genders.female },
+    { name: "Bob", age: 25, gender: Genders.male },
+    { name: "Charlie", age: 22, gender: Genders.others }
+];
+
+console.log(isOthers(buyers)); 
+
+
+// generics IMP
+function identity<T>(arg:T):T{
+ return arg;
+}
+
+const output1 = identity<string>("shivam");
+
+// 
+type argType = number | string;
+function firstEl(arr: argType):argType{
+  return arr;
+}
+
+console.log(firstEl("shivam"));
+console.log(firstEl(8));
+
+// make it better
+function firstEl2<T>(arr: T[]): T {
+    return arr[0];
+}
+
+let arr2 = ["brock", "roliins"];
+
+// Call the function with the correct type
+let finalAns = firstEl2(arr2); // TypeScript infers the type as string
+
+console.log(finalAns.toUpperCase()); // Output: "brock"
