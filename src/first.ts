@@ -5,7 +5,7 @@ console.log(a);
 let k =(a :number,b:string):string=>{
    return a+b;
 }
-let ans = k(2,"shi");
+let ans = k(2,"john");
 console.log(ans);
 
 // how to pass to function
@@ -21,6 +21,7 @@ console.log(greeting);
 function sum(a:number,b:number):number{
     return a+b;
 }
-
 const sumAns = sum(2,6);
 console.log(sumAns);
+
+//
