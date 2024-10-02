@@ -193,6 +193,12 @@ enum Direction {
     Right
 }
 
+// enum Direction {
+//     Up = 1,
+//     Down,
+//     Left,
+//     Right
+// }
 // Using the enum
 let move: Direction = Direction.Up;
 

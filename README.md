@@ -2,9 +2,13 @@
 ## src contains ts files while dist contain js file  ("rootDir": "./src") while ("outDir": "./dist)
 
 # how to get ts
- ## npm i -g typescript
- ## npm init
- ## npx i --tsc
+ ```bash
+  npm i -g typescript
+  npm init
+  npx tsc --init
+  ```
 
 # to run ts file
- ## use tsc -b 
+  ```bash
+  use tsc -b
+  ``` 
