@@ -24,4 +24,21 @@ function sum(a:number,b:number):number{
 const sumAns = sum(2,6);
 console.log(sumAns);
 
-//
+// can drive or not
+function isLegal(age: number): boolean {
+    return age >= 18 ? true : false;
+}
+
+const islegalAns :boolean = isLegal(20);
+console.log(islegalAns);
+
+// using cb the return would be : ()=> void  expect none args and the return type is void
+
+function runAfter1s(name: string, fn: (name: string) => void) {
+    setTimeout(() => fn(name), 1000); // Use an arrow function to pass the name
+}
+
+runAfter1s("shivam", function(name: string) {
+    console.log(`hello ${name}`);
+});
+
